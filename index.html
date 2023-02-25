@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <header>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="main.css">
+ </header>
+  <body>
+    <div class='wrapper'>
+      <label for='firstname'> Name:</label>
+      <input type='text' id='firstname'></br></br>
+      <button class='get_greeting'>Display</button>
+      <div class='results' style="padding-top: 20px;"></div>
+    </div>
+  </body>
+ <script>
+   $(document).ready(function(){
+     $('.wrapper').on('click', '.get_greeting', function(){
+        var table = ' <table><tr><th class="cell">ID</th><th class="cell">Name</th><th class="cell">Email</th></tr><tr style="color:blue;"><td>1</td><td>' + $('#firstname').val() + '</td><td>sawyerc17@students.ecu.edu</td></tr></table> '
+       //$('.results').html($('#firstname').val()+'</p>')
+       $('.results').html(table)
+     });
+   });
+ </script>
+</html>
